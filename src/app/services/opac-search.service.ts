@@ -28,7 +28,7 @@ export class OpacSearchService {
 
   url = environment.apiUrl + '/api/Material/GetMaterialsById';
   opacurl =  environment.apiUrl + '/api/material/GetMaterialDetails';
-  urlmetadata =  environment.apiUrl + '/api/Metadata/GetMaterialsById';
+  urlmetadata =  environment.apiUrl + '/api/Metadata/GetMetadataById';
   urlrepo =  environment.apiUrl + '/api/Econtent/GetMaterialsById';
 
   constructor(

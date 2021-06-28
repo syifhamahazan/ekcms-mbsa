@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { MyloanService } from 'src/app/services/myloan.service';
 import { ToastService } from 'src/app/services/toast.service';
@@ -9,6 +9,7 @@ import { ToastService } from 'src/app/services/toast.service';
   styleUrls: ['./myloanrenew.page.scss'],
 })
 export class MyloanrenewPage implements OnInit {
+  @Input() loginUser: any;
   badRequest = false;
   public authUser: any;
   postData = {
@@ -29,6 +30,12 @@ export class MyloanrenewPage implements OnInit {
       console.log(res);
       this.getLoan(res);
   });
+
+    this.auth.userData$.subscribe((res: any) => {
+    this.authUser = res;
+    console.log('Inside get user token' + this.auth);
+  });
+
 
   }
 

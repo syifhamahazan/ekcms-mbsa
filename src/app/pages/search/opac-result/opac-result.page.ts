@@ -33,7 +33,7 @@ export class OpacResultPage implements OnInit {
     // tslint:disable-next-line: deprecation
     this.auth.userData$.subscribe((res: any) => {
       this.authUser = res;
-      console.log('Inside get user token');
+      console.log('Inside get user token in opac');
       const cwId = this.activatedRoute.snapshot.paramMap.get('citedworkId');
 
     // tslint:disable-next-line: deprecation

@@ -97,6 +97,10 @@ export class HomePage implements OnInit {
   about(){
     this.router.navigate(['./home/about']);
   }
+
+  myothercharges(){
+    this.router.navigate(['./home/myothercharges']);
+  }
   async logoutAction() {
     const alert = await this.alertController.create({
       header: 'Oh no! You are leaving...',

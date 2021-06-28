@@ -63,6 +63,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/myreservation/myreservation.module').then( m => m.MyreservationPageModule)
       },
       {
+        path: 'myothercharges',
+        loadChildren: () => import('../pages/myothercharges/myothercharges.module').then( m => m.MyotherchargesPageModule)
+      },
+      {
         path: 'myloanhistory',
         loadChildren: () => import('../pages/myloanhistory/myloanhistory.module').then( m => m.MyloanhistoryPageModule)
       },

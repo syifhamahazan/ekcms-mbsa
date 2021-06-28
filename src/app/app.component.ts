@@ -29,7 +29,7 @@ export class AppComponent {
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnInit(): void {
-    this.bnIdle.startWatching(1500).subscribe((isTimedOut: boolean) => {
+    this.bnIdle.startWatching(500).subscribe((isTimedOut: boolean) => {
       this.loadingCtrl.create({
         message: 'Sorry, your session has expired. Please sign in again.'
     }).then((overlay) => {

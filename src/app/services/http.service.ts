@@ -95,6 +95,21 @@ export class HttpService {
         return this.http.get(url, { headers: apiHeaders });
         }
 
+        getOtherCharges(serviceName: string, data: any) {
+          console.log('Other Charges data is');
+          const apiHeaders = {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+            'Access-Control-Allow-Headers': 'Authorization',
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + data
+          };
+          const body = new HttpParams();
+          const url = environment.apiUrl + serviceName;
+          return this.http.post(url, body.toString(), { headers: apiHeaders });
+          }
+
+
 
       getFines(serviceName: string, data: any) {
       console.log('Fines data is');
